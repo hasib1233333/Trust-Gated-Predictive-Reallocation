@@ -1,10 +1,10 @@
-Title
+Title:
 Trust-Gated Predictive Reallocation: A Bayesian Communication-Reliability Approach to Decentralized Multi-Robot Task Allocation Under Lossy Networks
 
 
-Abstract
+Abstract:
 Decentralized task allocation in multi-robot systems typically relies on market-based auctions that assume every announce-bid-award-acknowledge message arrives reliably. Real deployments rarely meet that assumption: communication is lossy, and robots differ in transmit reliability due to hardware wear, antenna quality, or power budget. Existing communication-robust methods either reduce message frequency or reassign failed tasks after the fact; none treats reliability as a continuously estimated quantity shaping the allocation decision itself. Bayesian reputation models, standard in wireless sensor network security for scoring node trust, have not been applied to auction-based allocation. This paper introduces Trust-Gated Predictive Reallocation (TGPR), a decentralized auction mechanism built around a per-robot Bayesian estimate of round-trip communication reliability. TGPR discounts candidate bids toward robots that are both capable and reachable, sizes the acknowledgment timeout adaptively per robot instead of one fixed value, and lets idle robots that overheard a stalled award make a confidence-gated claim before the coordinator finishes its own recovery. We compare TGPR against a fixed-timeout auction, an exponential-backoff auction, and a periodic reconciliation baseline across five channel-quality regimes, two team sizes, and a hardware-heterogeneity ablation. TGPR cuts duplicate-execution waste by 24 percent and per-task messaging overhead by 14 percent relative to the simplest baseline, with both gains widening as channel quality worsens. It does not improve, and in poor channel conditions significantly reduces, overall completion rate; the ablation shows this cost growing rather than shrinking with hardware heterogeneity, opposite to what we expected. We report the trade-off directly and trace it to a specific timeout-inflation mechanism.
 
 
-Keywords
+Keywords:
 multi-robot task allocation, decentralized auctions, lossy communication, Bayesian trust, task reallocation, wireless reliability
